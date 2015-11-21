@@ -1,4 +1,4 @@
-# CSSCODER Project Builder
+# CSSCODER Project Builder [![Build Status](https://travis-ci.org/csscoderRU/project-builder.svg)](https://travis-ci.org/csscoderRU/project-builder)
 
 Сборщик настроенный на решение стандартных вопросов Front-End разработчиков, построен на Gulp.js
 
