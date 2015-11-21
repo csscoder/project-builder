@@ -1,0 +1,20 @@
+{
+  "name": "CSSCODER-template-bower-list",
+  "version": "0.0.1",
+  "description": "CSSCODER Template Builder",
+  "authors": [
+    "Alexander Zidyganov"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/csscoderRU/csscoder-template.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "2.1.4"
+  }
+}

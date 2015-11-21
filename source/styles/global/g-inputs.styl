@@ -1,0 +1,63 @@
+$g-input-default
+	outline none
+	font-family "Helvetica Neue"
+	font-size 21px
+	font-weight 400
+	background-color white
+	height 54px
+	border 1px solid #aadbeb
+	border-radius 3px
+	padding 8px 14px
+	line-height 1.4
+	width 100%
+	placeholder-color(#c3c3cf)
+	@extend $g-tr-border-color
+	&:hover
+		border-color: #a5aeb5
+		box-shadow: inset 2px 2px 8px rgba(0,0,0,.15)
+	&:focus
+		border-color: #09f
+	&.state--error
+		background rgba(#ffe6e6, .5)
+		border-color #ff5757
+		box-shadow 0 0 4px rgba(#ff5757, 0.8)
+
+
+
+// g-checkbox
+$g-label-checkbox
+	position relative
+	padding-left 40px
+	line-height: 30px
+	cursor pointer
+	@extend $inline
+
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		content: ''
+		width 30px
+		height 30px
+		background-color white
+		border 1px solid #d5d9dc
+		box-shadow inset 2.6px 1.5px 4px rgba(142, 151, 164, 0.28)
+		@extend $g-tr-border-color
+	&:hover
+		&:before
+			border-color: #3c91e6
+
+	&:after
+		content ''
+		position absolute
+		top: 8px
+		left: 4px
+		background: url(../img/common/check.png) 0 0 no-repeat;
+		background-size: contain
+		opacity: 0
+		@extend $g-tr-opacity
+		width 22px
+		height 15px
+	input(type=checkbox):checked+ &
+		&:after
+			opacity 1

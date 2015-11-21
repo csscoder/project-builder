@@ -1,0 +1,73 @@
+// MEDIA QUERIES VARIABLES
+
+/*!
+Media queries
+
+В проекте используется 3 ступени для адаптации под различные устройства
+
+Разработку очень желательно начинать с мобильной версии * * "Mobile First" * * так проще в переопределении стилей и прочих моментах
+
+изначально пишем стили под мобильное устройство
+
+затем идет версия для tablet
+
+финальный этап это десктоп версия проекта < br >
+
+В коде это выглядит следующим образом
+
+	.g-title-st2
+		font-size 24 px
+		font-weight 700
+		line-height 110 %
+		text-transform uppercase
+		+tablet()
+			font-size 26 px
+		+desktop()
+			font-size 30 px
+
+Styleguide 3.0
+*/
+
+// MEDIA QUERIES
+// +phone-only() +tablet() +tablet-only()
+// +desktop() +desktop-only() +xlarge() +xlarge-only() +xxlarge()
+
+// 0, 640px
+phone-only()
+	@media only screen and (max-width: 40em)
+		{block}
+
+// 641px ...
+tablet()
+	@media only screen and (min-width: 40.063em)
+		{block}
+
+// 641px, 1024px
+tablet-only()
+	@media (min-width: 40.063em) and (max-width: 64em)
+		{block}
+
+// 1025px ...
+desktop()
+	@media only screen and (min-width: 64.063em)
+		{block}
+
+// 1025px, 1440px
+desktop-only()
+	@media (min-width: 64.063em) and (max-width: 90em)
+		{block}
+
+// 1441px ...
+xlarge()
+	@media only screen and (min-width: 90.063em)
+		{block}
+
+// 1441px, 1920px
+xlarge-only()
+	@media (min-width: 90.063em) and (max-width: 120em)
+		{block}
+
+// 1921px ...
+xxlarge()
+	@media only screen and (min-width: 120.063em)
+		{block}

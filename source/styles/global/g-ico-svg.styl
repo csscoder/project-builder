@@ -1,0 +1,44 @@
+/*!
+SVG icons
+
+Используемая SVG графика на иконках используется в настоящем  размере<br>
+
+Styleguide 1.0
+*/
+
+/*!
+Список иконок
+
+.g-ico-build - иконка build
+.g-ico-build--active - иконка build
+.g-ico-like - иконка like
+.g-ico-like--active - иконка like
+
+Markup:
+<span class="{$modifiers}"></span>
+
+Styleguide 1.1
+*/
+
+[class^="g-ico-"]
+	background-repeat no-repeat
+	display inline-block
+	vertical-align: middle
+
+.g-ico-build
+	width 30px
+	height 30px
+	background-image svg('build', '[fill]: #f59767')
+.g-ico-build--active
+	width 30px
+	height 30px
+	background-image svg('build', '[fill]: #86ccfe')
+
+.g-ico-like
+	width 30px
+	height 28px
+	background-image svg('like', '[fill]: #ff6159')
+.g-ico-like--active
+	width 30px
+	height 28px
+	background-image svg('like', '[fill]: #a0c907')

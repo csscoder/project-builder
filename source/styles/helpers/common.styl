@@ -1,0 +1,129 @@
+// Blocks
+$inline
+	display: inline-block
+	vertical-align: top
+
+$inline-middle
+	display: inline-block
+	vertical-align: middle
+
+// clearfix
+$g-clearfix
+.clearfix
+	&:before
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
+// Form
+placeholder-color($color)
+	&::-webkit-input-placeholder
+		color: $color !important
+	&:-moz-placeholder
+		color: $color !important
+		opacity: 1
+	&::-moz-placeholder
+		color: $color !important
+		opacity: 1
+	&:-ms-input-placeholder
+		color: $color !important
+	&.placeholder
+		color: $color !important
+
+// Retina
+retina()
+	@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+		{block}
+
+// Hiding w/o display:none; for accessibility
+.hidden
+$hidden
+	position: absolute
+	overflow: hidden
+	clip: rect(0 0 0 0)
+	margin: -1px
+	padding: 0
+	width: 1px
+	height: 1px
+	border: 0
+
+.hide
+$hide
+	display: none
+	visibility: hidden
+
+// size click up
+$g-size-click
+	position relative
+	&:after
+		position absolute
+		content ''
+		left -25%
+		right -25%
+		top -25%
+		bottom -25%
+
+// Font-fase
+fonts($nameFont, $nameFile, $weight = normal, $style = normal)
+	@font-face
+		font-family $nameFont
+		src url(../fonts/$nameFile.eot)
+		src url(../fonts/$nameFile.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/$nameFile.woff) format('woff'),
+			url(../fonts/$nameFile.ttf) format('truetype'),
+			url(../fonts/$nameFile.svg#svgFontName) format('svg')
+		font-weight $weight
+		font-style $style
+
+//
+// TRIANGLE
+// ========
+triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
+
+	// Base triangle styles
+	width 0
+	height 0
+	background 0
+	border-style solid
+
+	// Styles for each direction
+	directions = {
+		top: {
+			border-width: 0 (width * .5) height (width * .5),
+			border-color: transparent transparent color transparent
+		},
+		topRight: {
+			border-width: 0 width height 0,
+			border-color: transparent color transparent transparent
+		},
+		right: {
+			border-width: (height * .5) 0 (height *.5) width,
+			border-color: transparent transparent transparent color
+		},
+		bottomRight: {
+			border-width: 0 0 height width,
+			border-color: transparent transparent color transparent
+		},
+		bottom: {
+			border-width: height (width * .5) 0 (width * .5),
+			border-color: color transparent transparent transparent
+		},
+		bottomLeft: {
+			border-width: width 0 0 height,
+			border-color: transparent transparent transparent color
+		},
+		left: {
+			border-width: (height * .5) width (height * .5) 0,
+			border-color: transparent color transparent transparent
+		},
+		topLeft: {
+			border-width: height width 0 0,
+			border-color: color transparent transparent transparent
+		}
+	}
+
+	// Mixin styles for passed direction
+	styles = directions[direction]
+	{styles}

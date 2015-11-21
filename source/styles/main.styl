@@ -1,0 +1,48 @@
+@import "global/GLOBAL"
+
+// page
+.l-html
+.l-body
+	height 100%
+.l-body
+	background url("../img/common/fone.jpg") no-repeat 50% 50%
+	background-size cover
+
+// box
+.box
+	background url("../img/common/calm.png") no-repeat 50% 0
+	background-size cover
+	width 200px
+	height 200px
+	margin 0 auto
+	+tablet()
+		width 300px
+		height 300px
+	+desktop()
+		width 400px
+		height 400px
+	+xlarge()
+		width 500px
+		height 500px
+// logo
+.logo
+	margin-top 20px
+	@extend $inline
+	white-space nowrap
+	text-indent -9999px
+	position relative
+	@extend $g-size-click
+
+	&--apple
+		background-image: url('../img/sprite/apple.png')
+		width 92px
+		height 111px
+		+retina()
+			background-image: url('../img/sprite/apple@2x.png')
+
+	&--audi
+		background-image: url('../img/sprite/audi.png')
+		width 150px
+		height 88px
+		+retina()
+			background-image: url(../img/sprite/audi@2x.png)
