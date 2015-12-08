@@ -13,7 +13,7 @@
 * [SC5-styleguide] (https://github.com/SC5/sc5-styleguide) Построение стайлГайда
 * [BrowserSync] (https://github.com/BrowserSync/gulp-browser-sync) запускает локально сервер для тестирования работы
 * [LostGrid] (https://github.com/corysimmons/lost) - построение сеток
-* [Bower] (http://bower.io/) - инсталяция js библиотечек
+* [Bower] (http://bower.io/) - инсталляция js библиотечек
 * [ImageMin] (https://github.com/sindresorhus/gulp-imagemin) минификатор используемых изображений
 * [PostCSS] (https://github.com/postcss/postcss) - постпроцессор для CSS на его основе работают некоторые используемые инструменты
 * [cssnano] (https://github.com/ben-eb/cssnano) минификатор стилей
