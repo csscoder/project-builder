@@ -1,33 +1,10 @@
 {
-  "requireCurlyBraces": [
-    "if",
-    "else",
-    "for",
-    "while",
-    "do"
-  ],
-  "requireSpaceAfterKeywords": [
-    "if",
-    "else",
-    "for",
-    "while",
-    "do",
-    "switch",
-    "return",
-    "catch"
-  ],
-  "disallowKeywords": [
-    "with"
-  ],
-  "disallowKeywordsOnNewLine": [
-    "else",
-    "catch"
-  ],
+  "requireCurlyBraces": ["if", "else", "for", "while", "do"],
+  "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "catch"],
+  "disallowKeywords": ["with"],
+  "disallowKeywordsOnNewLine": ["else", "catch"],
   "disallowSpaceAfterPrefixUnaryOperators": true,
-  "disallowSpaceBeforePostfixUnaryOperators": [
-    "++",
-    "--"
-  ],
+  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
   "requireSpaceBeforeBinaryOperators": true,
   "requireSpaceAfterBinaryOperators": true,
   "disallowMultipleVarDecl": true,
@@ -57,18 +34,11 @@
     "afterConsequent": true,
     "beforeAlternate": true
   },
-  "disallowSpaceBeforeBinaryOperators": [
-    ","
-  ],
+  "disallowSpaceBeforeBinaryOperators": [","],
   "requireCommaBeforeLineBreak": true,
   "validateQuoteMarks": "'",
   "disallowMultipleLineStrings": true,
-  "disallowImplicitTypeConversion": [
-    "numeric",
-    "boolean",
-    "binary",
-    "string"
-  ],
+  "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
   "disallowYodaConditions": true,
   "disallowSpacesInsideArrayBrackets": true,
   "requireDotNotation": true,
@@ -77,9 +47,7 @@
   "disallowQuotedKeysInObjects": true,
   "maximumLineLength": {
     "value": 120,
-    "allExcept": [
-      "urlComments"
-    ]
+    "allExcept": ["urlComments"]
   },
   "requireSpaceAfterLineComment": true,
   "requireLineFeedAtFileEnd": true,

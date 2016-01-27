@@ -3,7 +3,6 @@
   "latedef": "nofunc",
   "browser": true,
   "node": true,
-  // for browserify require etc
   "globals": [
     "$",
     "Prism",
@@ -15,7 +14,7 @@
     "afterEach"
   ],
   "indent": 2,
-  "camelcase": true,
+  "camelcase": false,
   "newcap": true,
   "undef": true,
   "multistr": true,
@@ -25,7 +24,6 @@
   "loopfunc": true,
   "-W004": true,
   "-W030": true,
-  // for yield* ...
-  "-W078": true
-  // allow setter w/o getter
+  "-W078": true,
+  "-W117": true
 }

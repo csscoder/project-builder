@@ -10,14 +10,21 @@ var postcssSVG = require('postcss-svg');
 var lost = require('lost');
 var browserSync = require('browser-sync');
 var cssnano = require('cssnano');
-var sprites = require('postcss-sprites');
+var sprites = require('postcss-sprites').default;
 var config = require('../config').stylus;
 
 var spriteOption = {
 	stylesheetPath: config.dest,
-	spritePath: './build/img/sprite/sprite.png',
+	spritePath: './build/img/sprite/sprite',
+	// filterBy: function (image) {
+	// 	return /sprite\/[a-zA-Z\d\S\s]*\.png$/gi.test(image.url);
+	// },
 	filterBy: function (image) {
-		return /sprite\/[a-zA-Z\d\S\s]*\.png$/gi.test(image.url);
+		// Allow only png files
+		if (!/sprite\/[a-zA-Z\d\S\s]*\.png$/.test(image.url)) {
+			return Promise.reject();
+		}
+		return Promise.resolve();
 	},
 	retina: true,
 	padding: 10
@@ -52,26 +59,4 @@ gulp.task('stylus-dev', function () {
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(config.dest))
 		.pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('stylus-styleGuide', function (cb) {
-	var processors = [
-		autoprefixer({browsers: config.browsers}),
-		lost,
-		postcssSVG({
-			paths: [
-				'../img/svg/iconsInline/',
-				'./styleGuide/img/svg/iconsInline/'
-			]
-		}),
-		sprites(spriteOption)
-	];
-	gulp.src(config.src)
-		.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-		.pipe(stylus())
-		.pipe(postcss(processors))
-		.pipe(gulp.dest(config.styleGuide))
-		.on('end', function () {
-			cb();
-		});
 });

@@ -1,8 +1,8 @@
 # CSSCODER Project Builder  [![Dependency Status](https://gemnasium.com/csscoderRU/project-builder.svg)](https://gemnasium.com/csscoderRU/project-builder)  [![Build Status](https://travis-ci.org/csscoderRU/project-builder.svg)](https://travis-ci.org/csscoderRU/project-builder)
 
-Сборщик настроенный на решение стандартных вопросов Front-End разработчиков, построен на Gulp.js
+Сборщик настроенный на решение стандартных вопросов Front-End разработчиков, построен на Gulp.js + использование WebPack
 
-#### Кто на чем пишет а сборщик настроен на работу с 
+#### Кто на чем пишет а сборщик настроен на работу с
 
 * [Jade] (https://github.com/jadejs/jade) препроцессор-шаблонизартор HTML
 * [Stylus] (https://github.com/stylus/stylus) CSS препроцессор
@@ -10,7 +10,6 @@
 #### Вспомогательные используемые решения
 
 * [Babel](https://github.com/babel/gulp-babel) помогает писать в новом стандарте JavaScript ES2015
-* [SC5-styleguide] (https://github.com/SC5/sc5-styleguide) Построение стайлГайда
 * [BrowserSync] (https://github.com/BrowserSync/gulp-browser-sync) запускает локально сервер для тестирования работы
 * [LostGrid] (https://github.com/corysimmons/lost) - построение сеток
 * [Bower] (http://bower.io/) - инсталляция js библиотечек
@@ -20,15 +19,15 @@
 * [autoprefixer] (https://github.com/postcss/autoprefixer) Авто подстановка префиксов в CSS
 * [postcss-svg] (https://github.com/Pavliko/postcss-svg) svg иконки в inline CSS (иконки только в текущем размере который будет использоваться в проекте)
 * [css-mqpacker] (https://github.com/hail2u/node-css-mqpacker) Объединение media query
-* [postcss-sprites] (https://github.com/2createStudio/postcss-sprites) css спрайт png 
+* [postcss-sprites] (https://github.com/2createStudio/postcss-sprites) css спрайт png
 
+Для запуска проекта прописаны следующие команды
 
-Для запуска проекта прописаны следующие команды 
-		
+		// команда начальной инициализации (bower install)
+		npm run init
 		// команда сборки проекта в продакшн
-		gulp
+		npm run build
 		// команда для разработки
-		gulp dev
+		npm run dev
 		// команда очистки проекта
-		gulp del
-
+		npm run del
