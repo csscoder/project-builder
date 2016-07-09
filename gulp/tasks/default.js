@@ -10,7 +10,7 @@ gulp.task('default', function () {
 		[
 			'jade',
 			'jsLibs',
-			'jsModule',
+			'jsMain',
 			'fonts',
 			'stylus'
 		]

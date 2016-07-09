@@ -28,7 +28,7 @@
     "node": ">= 4.4.3"
   },
   "scripts": {
-    "init": "npm bower install"
+    "init": "bower install"
   },
   "license": "MIT",
   "devDependencies": {

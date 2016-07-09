@@ -1,5 +1,5 @@
 $(function () {
 	'use strict';
-	let x =11;
+	let x =14;
 	console.log(x);
 });

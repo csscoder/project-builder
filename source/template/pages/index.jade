@@ -1,14 +1,13 @@
-extends ../layout/default
+extends ../layout/listing-page
 
 block title
-	title Главная страница
-
+	title All pages
 block content
-	.l-page
-		.box
-		//- header
-		.g-align--center
-			a(href="#3").logo.logo--apple Apple
-		.g-align--center
-			a(href="#3").logo.logo--audi Apple
-		//- End header
+
+	h2 Pages project <br>@
+		= namePr
+		| @
+
+	ul
+		li
+			a(href="main.html") Main page
