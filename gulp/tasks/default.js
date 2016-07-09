@@ -5,12 +5,14 @@ var config = require('../config');
 
 gulp.task('default', function () {
 	return runSequence(
+		'del',
 		'image',
 		[
 			'jade',
-			'webpack',
-			'stylus',
-			'fonts'
+			'jsLibs',
+			'jsModule',
+			'fonts',
+			'stylus'
 		]
 	);
 });

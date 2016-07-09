@@ -1,11 +1,24 @@
 var build = './build';
 var src = './source';
-var jsCode = src + '/js/';
-var modules = src + '/scripts/modules';
+var libs = src + '/vendor';
+var scripts = src + '/scripts/';
 
 module.exports = {
+
+	libs: {
+		src: [
+			libs + '/jquery/dist/jquery.js'
+		],
+		watch: [libs + '/**/*.js'],
+		dest: build + '/js'
+	},
+
 	app: {
-		watch: [jsCode + '/**/*.js'],
-		dest: [build + '/**/*.js'],
+		src: [
+			scripts + '/**/*.js'
+		],
+		watch: [scripts + '/**/*.js'],
+		dest: build + '/js'
 	}
+
 };

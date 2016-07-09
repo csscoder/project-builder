@@ -1,7 +1,6 @@
-
-/source/scripts/libs/*
+/source/vendor
 /node_modules
 /build
 .DS_Store
 .idea
-/source/vendor
+/.idea/workspace.xml
