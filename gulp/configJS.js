@@ -1,6 +1,6 @@
 var build = './build';
 var src = './source';
-var libs = src + '/vendor';
+var libs = './node_modules';
 var scripts = src + '/scripts/';
 
 module.exports = {

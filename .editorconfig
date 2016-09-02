@@ -8,7 +8,7 @@ insert_final_newline = true
 charset = utf-8
 
 # 1 tab indentation
-[*.{js, scss, sass, jade, pug, css}]
+[*.{js, scss, sass, jade, pug, css, styl}]
 indent_style = tab
 
 # 2 space indentation
